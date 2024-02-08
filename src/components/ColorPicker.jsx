@@ -9,14 +9,14 @@ function ColorPicker() {
 
 
   return (
-    <div className="flex flex-col justify-around items-center border-2 border-black w-[20%] h-[36vh] rounded-md">
+    <div className="flex flex-col justify-around items-center border-2 border-black w-full h-[40vh] lg lg:w-[20%] lg:h-[36vh] rounded-md">
       <h1 className="text-xl font-bold border-b-2 pb-2 text-center border-black w-full">My Color Picker</h1>
-      <div className="color-display w-full flex justify-center items-center border border-black p-4"
+      <div className="color-display w-1/2 flex justify-center items-center border border-black p-4 rounded-xl h-[50%] mt-4"
       style={{backgroundColor: color}}>
-        <p className="text-xl w-full border-black">Selected Color: {color}</p>
       </div>
+      <p className="text-xl w-full text-center border-black">Selected Color: {color}</p>
       <label htmlFor="">Select a Color:</label>
-      <input type="color" value={color} onChange={handleColorChange} />
+      <input className="lg:w-[3vw] lg:h-[3vw] h-[10vw] w-[10vw]" type="color" value={color} onChange={handleColorChange} />
     </div>
   );
 }
