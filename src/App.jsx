@@ -1,19 +1,18 @@
 import React from "react";
-import ColorPicker from "./components/ColorPicker";
-import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <>
       <div className="main px-[4vw] py-[2vw] m-0 flex flex-col justify-center items-center bg-[#FDFDFF]">
-        <Navbar/>
-        <Homepage/>
-        <Footer/>
+        <Navbar />
+        <Outlet />
+        <Footer />
       </div>
     </>
   );
-}
+};
 
 export default App;
