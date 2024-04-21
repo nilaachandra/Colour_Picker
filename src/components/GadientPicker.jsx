@@ -34,7 +34,7 @@ function GradientPicker() {
         <h1 className="font-bold lg:text-[4vw] text-[10vw] leading-[10vw] lg:leading-[4vw] text-center">
           Gradient Picker
         </h1>
-        <p className="lg:text-[1.4vw] text-[5vw] text-center w-full lg:w-[60%]">
+        <p className="lg:text-[1.4vw] text-[5vw] text-center w-full lg:w-[60%] poppins-regular-italic">
           A simple fast and lightweight Gradient picker for all your needs. Pick
           your Gradient!
         </p>

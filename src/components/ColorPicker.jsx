@@ -24,7 +24,7 @@ const ColorPicker = () => {
         <h1 className="font-bold lg:text-[4vw] text-[10vw] leading-[10vw] lg:leading-[4vw] text-center">
           Color Picker
         </h1>
-        <p className="lg:text-[1.4vw] text-[5vw] text-center w-full lg:w-[60%]">
+        <p className="lg:text-[1.4vw] poppins-regular-italic text-[5vw] text-center w-full lg:w-[60%]">
           A simple fast and lightweight color picker for all your needs. Pick
           your Color!
         </p>

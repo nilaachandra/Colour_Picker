@@ -33,7 +33,7 @@ const Homepage = () => {
   return (
     <div className='w-full flex lg:flex-row flex-col-reverse lg:mt-4 mt-8 min-h-[40vh] justify-between items-center '>
       <div className="leftside lg:w-[45%] w-full flex flex-col justify-center items-center gap-3 lg:mt-0 mt-8">
-        <h1 className='font-bold lg:text-[4vw] text-[10vw] lg:leading-[4.5vw] leading-[11vw] text-center'>The <span className='text-[#f30a0a]'>Superfast</span>, <span className='text-[#0611f2]'>Easy to Use</span>, <span className='text-[#00fbfe]'>Lightweight</span> and <span className='text-[#fef500]'>Minimal</span> Color Picker</h1>
+        <h1 className=' poppins-extrabold lg:text-[4vw] text-[10vw] lg:leading-[4.5vw] leading-[11vw] text-center'>The <span className='text-[#f30a0a]'>Superfast</span>, <span className='text-[#0611f2]'>Easy to Use</span>, <span className='text-[#00fbfe]'>Lightweight</span> and <span className='text-[#fef500]'>Minimal</span> Color Picker</h1>
         <p className='lg:text-[1.4vw] text-[6vw] text-center'>Create the color you like, pick it and use it on your CSS</p>
         <Link to='/color-picker' className='w-full flex justify-center items-center'><Button className='lg:w-2/3 w-[85%] bg-[#0611f2] text-[white] border-[#0611f2] font-bold uppercase hover:bg-white hover:text-[#0611f2] transition-all duration-300'>Color Picker</Button></Link>
         <Link to='/gradient-picker' className='w-full flex justify-center items-center'><Button className='lg:w-2/3 w-[85%] bg-[#0611f2] text-[white] border-[#0611f2] font-bold uppercase hover:bg-white hover:text-[#0611f2] transition-all duration-300'>Gradient Picker</Button></Link>
