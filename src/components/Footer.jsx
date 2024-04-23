@@ -10,8 +10,9 @@ const Footer = () => {
             <a href='https://www.instagram.com/niillaaa.a/'><RiInstagramFill size={30}/></a>
         </div>
         <div className="tags flex flex-col justify-center items-center">
-          <h1 className='text-[#0611f2]'><span>©️2024</span> <span className=''>ColorsByNilaa || All Rights Reserved</span> </h1>
-          <p className='text-[#0611f2]'>Developed with &#9829; Nilaa Laishram</p>
+          <h1 className=''><span>©️2024</span> <span className=''>ColorsByNilaa || All Rights Reserved</span> </h1>
+          <p className=''>Developed with &#9829; Nilaa Laishram</p>
+          <p>Wanna Support Me? <a href='https://buymeacoffee.com/nilaacodes' className='text-[#0611f2]'>Buy me a Coffee to support my Work!</a></p>
         </div>
     </footer>
   )

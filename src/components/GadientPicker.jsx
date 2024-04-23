@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import Button from './Button';
 import { Toaster, toast } from 'sonner'
 import { Link } from 'react-router-dom';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-function GradientPicker() {
+const GradientPicker = () => {
   const [angle, setAngle] = useState(0);
   const [color1, setColor1] = useState('#FFFFFF');
   const [color2, setColor2] = useState('#000000');
@@ -28,8 +30,19 @@ function GradientPicker() {
     toast.success('Copied')
   };
 
+  const container = useRef()
+  useGSAP(() => {
+    gsap.from(".box", {
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.4,
+      ease:'power2.in',
+    })
+  
+  }, { scope: container });
   return (
-    <div className="w-full flex flex-col justify-center items-center mx-auto p-6 rounded-md font-bold">
+    <div ref={container} className='w-full'>
+          <div className="box w-full flex flex-col justify-center items-center mx-auto p-6 rounded-md font-bold">
       <div className="lg:w-1/2 w-[100%] flex flex-col justify-center items-center font-normal mb-4">
         <h1 className="font-bold lg:text-[4vw] text-[10vw] leading-[10vw] lg:leading-[4vw] text-center">
           Gradient Picker
@@ -81,8 +94,10 @@ function GradientPicker() {
         <Button className='bg-[#0611f2] text-[white] border-[#0611f2] uppercase hover:bg-white hover:text-[#0611f2] transition-all duration-300 font-bold ' onClick={copyToClipboard}>Copy Gradient</Button>
       </div>
           </div>
-          <h1 className='mt-4 font-normal'>Want a Color? Check out Our <Link to='/Color-picker' className="text-[#0611f2]">Color Picker!</Link></h1>
+          <h1 className='mt-4 font-normal'>Want a Color? Check out Our <Link to='/color-picker' className="text-[#0611f2]">Color Picker!</Link></h1>
           <Toaster richColors position="top-right" duration={3000} toastOptions={{classNames: {title: 'text-[#0611f2]'}}}/>
+    </div>
+
     </div>
   );
 }

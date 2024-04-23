@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Button from "./Button";
 import { Toaster, toast } from 'sonner'
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 const ColorPicker = () => {
+
   const [color, setColor] = useState("#FFFFFF");
+  
+  const container = useRef()
+  useGSAP(() => {
+    gsap.from(".box", {
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.4,
+      ease:'power2.in',
+    })
+  
+  }, { scope: container });
+
   const handleColorChange = (e) => {
     setColor(e.target.value.toUpperCase());
   };
+
   const copyToClipboard = () => {
     // Create a textarea element to copy the color value
     const textarea = document.createElement("textarea");
@@ -18,8 +35,11 @@ const ColorPicker = () => {
     document.body.removeChild(textarea);
     toast.success('Copied')
   };
+
+
   return (
-    <div className="w-full flex flex-col justify-center items-center min-h-[40vh] gap-3 mt-7">
+    <div ref={container} className="w-full">
+          <div className="box w-full flex flex-col justify-center items-center min-h-[40vh] gap-3 mt-7">
       <div className="lg:w-1/2 w-[75%] flex flex-col justify-center items-center">
         <h1 className="font-bold lg:text-[4vw] text-[10vw] leading-[10vw] lg:leading-[4vw] text-center">
           Color Picker
@@ -44,6 +64,8 @@ const ColorPicker = () => {
     <h1>Want a Gradient? Check out Our <Link to='/gradient-picker' className="text-[#0611f2]">Gradient Picker!</Link></h1>
     <Toaster richColors position="top-right" duration={3000} toastOptions={{classNames: {title: 'text-[#0611f2]'}}}/>
     </div>
+    </div>
+
   );
 }
 

@@ -10,7 +10,7 @@ import GradientPicker from './components/GadientPicker.jsx'
 
 const router = createBrowserRouter([
   {
-  path: "/",
+  path: "",
   element: <App />,
   children:[
     {
