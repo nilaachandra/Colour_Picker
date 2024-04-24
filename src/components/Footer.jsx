@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="tags flex flex-col justify-center items-center">
           <h1 className=''><span>©️2024</span> <span className=''>ColorsByNilaa || All Rights Reserved</span> </h1>
           <p className=''>Developed with &#9829; Nilaa Laishram</p>
-          <p>Wanna Support Me? <a href='https://buymeacoffee.com/nilaacodes' className='text-[#0611f2]'>Buy me a Coffee to support my Work!</a></p>
+          <p className='text-center'>Wanna Support Me? <a href='https://buymeacoffee.com/nilaacodes' className='text-[#0611f2]'>Buy me a Coffee to support my Work!</a></p>
         </div>
     </footer>
   )
